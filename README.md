@@ -1,231 +1,150 @@
-# Mohammed Athar K — Portfolio v2.0
+# Mohammed Athar K — Developer Portfolio
 
-> Multi-page, fully animated, production-ready developer portfolio  
-> Built with React + Vite + Framer Motion + Tailwind CSS + FastAPI
+A modern, animated developer portfolio showcasing my projects, skills, and education.
+Built with **React, Vite, Tailwind CSS, and Framer Motion**, with an optional **FastAPI backend** for the contact form.
 
----
-
-## 🗂️ Folder Structure
-
-```
-portfolio/
-├── 📁 src/
-│   ├── 📁 pages/
-│   │   ├── Home.jsx         ← Particles, 3D name, typing animation
-│   │   ├── About.jsx        ← Bio, terminal card, interests
-│   │   ├── Skills.jsx       ← Animated skill bars, tech pills
-│   │   ├── Projects.jsx     ← Cards with modal detail view
-│   │   ├── Education.jsx    ← University details, courses
-│   │   ├── Contact.jsx      ← Socials + contact form
-│   │   └── NotFound.jsx     ← 404 page
-│   ├── 📁 components/
-│   │   ├── layout/
-│   │   │   ├── Navbar.jsx   ← Sticky glass nav, mobile menu
-│   │   │   └── PageTransition.jsx
-│   │   └── ui/
-│   │       └── Cursor.jsx   ← Custom cursor (desktop)
-│   ├── 📁 data/
-│   │   └── data.js          ⭐ ALL YOUR CONTENT LIVES HERE
-│   ├── 📁 hooks/
-│   │   └── index.js         ← useReveal, useCounter, etc.
-│   ├── 📁 styles/
-│   │   └── globals.css      ← Global styles + Tailwind
-│   ├── App.jsx              ← Router + AnimatePresence
-│   └── main.jsx
-│
-├── 📁 backend/
-│   ├── main.py              ← FastAPI contact form API
-│   ├── requirements.txt     ← Python dependencies
-│   └── .env.example         ← Environment variables template
-│
-├── 📁 public/
-│   ├── favicon.svg
-│   └── resume.pdf           ← ⚠️ DROP YOUR RESUME HERE
-│
-├── index.html
-├── vite.config.js
-├── tailwind.config.js
-├── vercel.json              ← Vercel deployment config
-└── package.json
-```
+This portfolio highlights the projects I’ve built while studying **Bachelor of Computer Application (BCA)** at **Vellore Institute of Technology**.
 
 ---
 
-## ✏️ Step 1 — Personalize
+## Live Website
 
-Open **`src/data/data.js`** and update:
-
-```js
-export const personal = {
-  email: 'your.real@email.com',
-  phone: '+91 XXXXX XXXXX',
-  linkedin: 'https://linkedin.com/in/YOUR-ID',
-  github: 'https://github.com/YOUR-USERNAME',
-  instagram: 'https://instagram.com/YOUR-ID',
-}
-```
-
-Also update project `github` and `demo` links in the `projects` array.
+**Portfolio:**
+https://your-portfolio-url.vercel.app
 
 ---
 
-## 📄 Step 2 — Add Your Resume
-
-Place your resume as `public/resume.pdf` — the Download button works automatically.
-
----
-
-## 💻 Step 3 — Run Locally
-
-### Prerequisites
-- **Node.js 18+** → https://nodejs.org
-- **Python 3.10+** (for backend) → https://python.org
+## Tech Stack
 
 ### Frontend
 
+* React
+* Vite
+* Tailwind CSS
+* Framer Motion
+
+### Backend (Contact Form API)
+
+* FastAPI
+* Python
+
+### Tools
+
+* Git & GitHub
+* VS Code
+* Vercel (deployment)
+
+---
+
+## Features
+
+* Multi-page animated portfolio
+* Smooth page transitions using Framer Motion
+* Interactive project showcase
+* Animated skill progress bars
+* Contact form with FastAPI backend
+* Mail fallback if backend is offline
+* Fully responsive (mobile, tablet, desktop)
+* Downloadable resume
+* Custom UI animations and gradients
+
+---
+
+## Sections
+
+* Home
+* About
+* Skills
+* Projects
+* Education
+* Contact
+
+---
+
+## Projects Featured
+
+### Re-Po Generator
+
+An intelligent platform that generates professional resumes and portfolio websites from user-provided information.
+
+**Tech:** React, FastAPI, Python, Tailwind
+
+Repository:
+https://github.com/kmdathar07/re-po-generator
+
+Live Demo:
+https://re-po-generator.vercel.app/
+
+---
+
+### Class Voting System
+
+A classroom polling platform where teachers can create votes and students can participate instantly.
+
+**Tech:** React, JavaScript, CSS
+
+Repository:
+https://github.com/kmdathar07/classVoting
+
+---
+
+### Event Registration System
+
+A Java + JDBC based system demonstrating CRUD operations and database integration.
+
+**Tech:** Java, JDBC, SQL, MySQL
+
+Repository:
+https://github.com/kmdathar07/event-registration-system
+
+---
+
+## Running the Project Locally
+
+### 1. Clone the repository
+
 ```bash
-cd portfolio
+git clone https://github.com/kmdathar07/mohammed-athar-portfolio.git
+cd mohammed-athar-portfolio
+```
+
+### 2. Install dependencies
+
+```bash
 npm install
+```
+
+### 3. Start development server
+
+```bash
 npm run dev
-# → http://localhost:3000
 ```
 
-### Backend (Optional — for real contact form emails)
+Open:
 
-```bash
-cd backend
-python -m venv venv
-
-# Windows:
-venv\Scripts\activate
-# Mac/Linux:
-source venv/bin/activate
-
-pip install -r requirements.txt
-cp .env.example .env
-# Edit .env with your Gmail credentials
-
-uvicorn main:app --reload --port 5000
-# → http://localhost:5000
-# → API docs at http://localhost:5000/docs
 ```
-
-**Note:** Without the backend running, the contact form falls back to opening your mail client (`mailto:`). Still works great!
-
----
-
-## 🚀 Step 4 — Deploy Frontend on Vercel
-
-### Option A — Vercel CLI (Fastest)
-
-```bash
-npm install -g vercel
-vercel
-
-# Follow prompts:
-# → Set up project? Yes
-# → Project name: mohammed-athar-portfolio
-# → Directory: ./
-# → Override settings? No
-
-# Deployed to: https://your-project.vercel.app
-```
-
-### Option B — GitHub + Vercel Dashboard
-
-1. Push to GitHub: `git init && git add . && git commit -m "init" && git push`
-2. Go to https://vercel.com → Add New Project
-3. Import your GitHub repo
-4. Vercel auto-detects Vite → Click **Deploy**
-5. Done in ~60 seconds!
-
-### Option C — Drag & Drop
-
-```bash
-npm run build
-# Drag the dist/ folder to https://vercel.com/new
+http://localhost:3000
 ```
 
 ---
 
-## 🔧 Step 5 — Deploy Backend (Optional)
+## Contact
 
-### On Railway (Free tier available)
+Email:
+[kmdathar07@gmail.com](mailto:kmdathar07@gmail.com)
 
-1. Go to https://railway.app → New Project → Deploy from GitHub
-2. Select your repo → Set root directory to `backend/`
-3. Add environment variables from `.env.example`
-4. Railway auto-detects Python → deploys FastAPI
+GitHub:
+https://github.com/kmdathar07
 
-### On Render (Free)
-
-1. Go to https://render.com → New Web Service
-2. Connect GitHub, select repo, set root to `backend/`
-3. Build command: `pip install -r requirements.txt`
-4. Start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-5. Add env vars → Deploy
-
-### Update Frontend URL
-
-After deploying backend, update `vite.config.js`:
-```js
-proxy: {
-  '/api': {
-    target: 'https://your-backend.railway.app',
-  },
-},
-```
+Instagram:
+https://instagram.com/mr.athar07
 
 ---
 
-## 📧 Set Up Gmail for Contact Form
+## License
 
-1. Go to https://myaccount.google.com/security
-2. Enable 2-Step Verification
-3. Search "App Passwords" → Create one for "Mail"
-4. Use that 16-char password as `SMTP_PASS` in `.env`
-5. Messages arrive in your inbox with full HTML formatting!
+This project is open source and available under the **MIT License**.
 
 ---
 
-## 🎨 Customization
-
-### Change accent color
-In `src/styles/globals.css`:
-```css
-:root { --accent: #E8654A; }  /* Change to any color */
-```
-
-### Add more projects
-In `src/data/data.js`, add to `projects` array.
-
-### Change page background
-In `globals.css`, update `.bg-home`, `.bg-about`, etc.
-
----
-
-## ✅ Feature Checklist
-
-- [x] **6 separate pages** with smooth transitions (Framer Motion)
-- [x] **Animated particle field** on homepage (canvas + requestAnimationFrame)
-- [x] **3D parallax name** follows mouse
-- [x] **Custom cursor** with ring tracker (desktop)
-- [x] **Typing animation** cycling through roles
-- [x] **Glass morphism** navbar with mobile hamburger
-- [x] **Scroll-triggered reveal** on all elements
-- [x] **Animated skill progress bars**
-- [x] **Interactive skill group accordion**
-- [x] **Project cards + modal** for details
-- [x] **FastAPI backend** for contact form with HTML emails
-- [x] **Mailto fallback** if backend is offline
-- [x] **Fully responsive** — mobile, tablet, desktop
-- [x] **Light warm color palette** (cream, sand, soft gradients)
-- [x] **Floating geometric shapes** on hero
-- [x] **Animated blob backgrounds**
-- [x] **SEO meta tags** in index.html
-- [x] **Security headers** in vercel.json
-- [x] **404 Not Found** page
-
----
-
-Built with 🔥 for Mohammed Athar K · VIT 2027
+Built with passion by **Mohammed Athar K**
