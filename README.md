@@ -1,7 +1,7 @@
 # Mohammed Athar K — Developer Portfolio
 
-A modern, animated developer portfolio showcasing my projects, skills, and education.
-Built with **React, Vite, Tailwind CSS, and Framer Motion**, with an optional **FastAPI backend** for the contact form.
+A modern developer portfolio showcasing my projects, skills, and education.
+Built with **React, Vite, Tailwind CSS, and Framer Motion**, with an optional **FastAPI backend** for handling the contact form.
 
 This portfolio highlights the projects I’ve built while studying **Bachelor of Computer Application (BCA)** at **Vellore Institute of Technology**.
 
@@ -9,8 +9,8 @@ This portfolio highlights the projects I’ve built while studying **Bachelor of
 
 ## Live Website
 
-**Portfolio:**
-https://your-portfolio-url.vercel.app
+Portfolio:
+https://mohammed-athar-portfolio.vercel.app
 
 ---
 
@@ -23,7 +23,7 @@ https://your-portfolio-url.vercel.app
 * Tailwind CSS
 * Framer Motion
 
-### Backend (Contact Form API)
+### Backend
 
 * FastAPI
 * Python
@@ -38,26 +38,14 @@ https://your-portfolio-url.vercel.app
 
 ## Features
 
-* Multi-page animated portfolio
+* Multi-page animated developer portfolio
 * Smooth page transitions using Framer Motion
 * Interactive project showcase
 * Animated skill progress bars
 * Contact form with FastAPI backend
-* Mail fallback if backend is offline
-* Fully responsive (mobile, tablet, desktop)
-* Downloadable resume
-* Custom UI animations and gradients
-
----
-
-## Sections
-
-* Home
-* About
-* Skills
-* Projects
-* Education
-* Contact
+* Email fallback if backend is offline
+* Fully responsive design
+* Resume download option
 
 ---
 
@@ -65,23 +53,33 @@ https://your-portfolio-url.vercel.app
 
 ### Re-Po Generator
 
-An intelligent platform that generates professional resumes and portfolio websites from user-provided information.
+An intelligent platform that automatically generates professional resumes and portfolio websites from user-provided information.
 
-**Tech:** React, FastAPI, Python, Tailwind
+Tech Stack:
+
+* React
+* FastAPI
+* Python
+* Tailwind CSS
 
 Repository:
 https://github.com/kmdathar07/re-po-generator
 
 Live Demo:
-https://re-po-generator.vercel.app/
+https://re-po-generator.vercel.app
 
 ---
 
 ### Class Voting System
 
-A classroom polling platform where teachers can create votes and students can participate instantly.
+A classroom voting platform where teachers can create polls and students can vote instantly.
 
-**Tech:** React, JavaScript, CSS
+Tech Stack:
+
+* React
+* JavaScript
+* CSS
+* Local Storage
 
 Repository:
 https://github.com/kmdathar07/classVoting
@@ -90,9 +88,14 @@ https://github.com/kmdathar07/classVoting
 
 ### Event Registration System
 
-A Java + JDBC based system demonstrating CRUD operations and database integration.
+A Java application demonstrating database connectivity and CRUD operations using JDBC.
 
-**Tech:** Java, JDBC, SQL, MySQL
+Tech Stack:
+
+* Java
+* JDBC
+* SQL
+* MySQL
 
 Repository:
 https://github.com/kmdathar07/event-registration-system
@@ -101,26 +104,26 @@ https://github.com/kmdathar07/event-registration-system
 
 ## Running the Project Locally
 
-### 1. Clone the repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/kmdathar07/mohammed-athar-portfolio.git
 cd mohammed-athar-portfolio
 ```
 
-### 2. Install dependencies
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-### 3. Start development server
+Run the development server:
 
 ```bash
 npm run dev
 ```
 
-Open:
+Open in browser:
 
 ```
 http://localhost:3000
@@ -130,21 +133,21 @@ http://localhost:3000
 
 ## Contact
 
-Email:
+Email
 [kmdathar07@gmail.com](mailto:kmdathar07@gmail.com)
 
-GitHub:
+GitHub
 https://github.com/kmdathar07
 
-Instagram:
+Instagram
 https://instagram.com/mr.athar07
 
 ---
 
 ## License
 
-This project is open source and available under the **MIT License**.
+This project is open source and available under the MIT License.
 
 ---
 
-Built with passion by **Mohammed Athar K**
+Built by **Mohammed Athar K**
