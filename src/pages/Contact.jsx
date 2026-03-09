@@ -9,7 +9,7 @@ const contactCards = [
   {
     icon: <Mail size={20} />,
     label: 'Email',
-    value: 'mohammed.athar@example.com',
+    value: 'kmdathar07@gmail.com',
     href: `mailto:${personal.email}`,
     color: '#E8654A',
     bg: 'bg-accent/10',
@@ -19,7 +19,7 @@ const contactCards = [
     icon: <Linkedin size={20} />,
     label: 'LinkedIn',
     value: 'Mohammed Athar K',
-    href: personal.linkedin,
+    href: '#',
     color: '#0A66C2',
     bg: 'bg-blue-50',
     border: 'border-blue-200/50',
@@ -27,7 +27,7 @@ const contactCards = [
   {
     icon: <Github size={20} />,
     label: 'GitHub',
-    value: 'mohammed-athar-k',
+    value: 'kmdathar07',
     href: personal.github,
     color: '#1A1A2E',
     bg: 'bg-ink/5',
@@ -36,7 +36,7 @@ const contactCards = [
   {
     icon: <Instagram size={20} />,
     label: 'Instagram',
-    value: '@mohammed.athar.k',
+    value: '@mr.athar07',
     href: personal.instagram,
     color: '#E1306C',
     bg: 'bg-pink-50',
@@ -84,7 +84,7 @@ function ContactCard({ card, index }) {
 
 function ContactForm() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
-  const [status, setStatus] = useState('idle') // idle | loading | success | error
+  const [status, setStatus] = useState('idle')
   const { ref, inView } = useInView({ triggerOnce: true })
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
@@ -103,7 +103,6 @@ function ContactForm() {
       setForm({ name: '', email: '', subject: '', message: '' })
       setTimeout(() => setStatus('idle'), 5000)
     } catch {
-      // Fallback: open mailto
       window.location.href = `mailto:${personal.email}?subject=${encodeURIComponent(form.subject || 'Portfolio Contact')}&body=${encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`
       setStatus('idle')
     }
@@ -123,11 +122,7 @@ function ContactForm() {
       </div>
 
       {status === 'success' ? (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="text-center py-12"
-        >
+        <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="text-center py-12">
           <CheckCircle size={48} className="text-green-500 mx-auto mb-4" />
           <h4 className="font-heading font-bold text-ink text-xl mb-2">Message Sent!</h4>
           <p className="text-slate">I'll get back to you soon. Thanks for reaching out!</p>
@@ -137,59 +132,25 @@ function ContactForm() {
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <label className="block font-mono text-xs text-slate uppercase tracking-widest mb-2">Name *</label>
-              <input
-                type="text"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                required
-                className="input-field"
-                placeholder="Your full name"
-              />
+              <input type="text" name="name" value={form.name} onChange={handleChange} required className="input-field" placeholder="Your full name" />
             </div>
             <div>
               <label className="block font-mono text-xs text-slate uppercase tracking-widest mb-2">Email *</label>
-              <input
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                required
-                className="input-field"
-                placeholder="you@example.com"
-              />
+              <input type="email" name="email" value={form.email} onChange={handleChange} required className="input-field" placeholder="you@example.com" />
             </div>
           </div>
 
           <div>
             <label className="block font-mono text-xs text-slate uppercase tracking-widest mb-2">Subject</label>
-            <input
-              type="text"
-              name="subject"
-              value={form.subject}
-              onChange={handleChange}
-              className="input-field"
-              placeholder="What's this about?"
-            />
+            <input type="text" name="subject" value={form.subject} onChange={handleChange} className="input-field" placeholder="What's this about?" />
           </div>
 
           <div>
             <label className="block font-mono text-xs text-slate uppercase tracking-widest mb-2">Message *</label>
-            <textarea
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              required
-              className="input-field"
-              placeholder="Tell me about your project, opportunity, or just say hi..."
-            />
+            <textarea name="message" value={form.message} onChange={handleChange} required className="input-field" placeholder="Tell me about your project, opportunity, or just say hi..." />
           </div>
 
-          <button
-            type="submit"
-            disabled={status === 'loading'}
-            className="btn-primary w-full justify-center disabled:opacity-60 disabled:cursor-not-allowed"
-          >
+          <button type="submit" disabled={status === 'loading'} className="btn-primary w-full justify-center disabled:opacity-60 disabled:cursor-not-allowed">
             {status === 'loading' ? (
               <>
                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -219,37 +180,51 @@ export default function Contact() {
   return (
     <PageTransition>
       <div className="page-full bg-contact overflow-y-auto">
+
         <div className="absolute top-40 left-0 w-80 h-80 bg-violet/20 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute bottom-20 right-10 w-72 h-72 bg-mint/20 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 pt-28 pb-20 relative z-10">
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-12"
-          >
+
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="mb-12">
             <div className="section-number mb-4">05 — Contact</div>
+
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
               <h2 className="font-heading font-extrabold text-ink leading-tight" style={{ fontSize: 'clamp(40px, 6vw, 76px)' }}>
                 Let's <span className="text-gradient">Connect</span>
               </h2>
+
               <p className="text-slate text-base max-w-xs mb-2">
-                Open to internships, collabs, and cool projects. Don't be shy!
+                Open to internships, collaborations, and interesting projects. Feel free to reach out.
               </p>
             </div>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-10">
-            {/* Left: Contact cards */}
+
             <div>
               <div className="space-y-3 mb-8">
-                {contactCards.map((card, i) => (
-                  <ContactCard key={card.label} card={card} index={i} />
-                ))}
+
+                {contactCards.map((card, i) => {
+                  if (card.label === 'LinkedIn') {
+                    return (
+                      <div
+                        key={card.label}
+                        onClick={(e) => {
+                          e.preventDefault()
+                          alert('LinkedIn profile not created yet. Coming soon!')
+                        }}
+                      >
+                        <ContactCard card={card} index={i} />
+                      </div>
+                    )
+                  }
+
+                  return <ContactCard key={card.label} card={card} index={i} />
+                })}
+
               </div>
 
-              {/* Availability note */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -272,8 +247,8 @@ export default function Contact() {
               </motion.div>
             </div>
 
-            {/* Right: Form */}
             <ContactForm />
+
           </div>
         </div>
       </div>

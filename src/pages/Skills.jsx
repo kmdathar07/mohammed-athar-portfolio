@@ -145,31 +145,33 @@ export default function Skills() {
         <div className="absolute bottom-20 right-10 w-72 h-72 bg-mint/20 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 pt-28 pb-20 relative z-10">
-          {/* Header */}
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <div className="section-number mb-4">02 — Skills</div>
+
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-4">
               <h2 className="font-heading font-extrabold text-ink leading-tight" style={{ fontSize: 'clamp(40px, 6vw, 76px)' }}>
                 Tech <span className="text-gradient-cool">Stack</span>
               </h2>
+
               <p className="text-slate text-base max-w-sm mb-2">
-                Technologies I work with, organized by domain.
+                Technologies I’ve used while building projects like Re-Po Generator, ClassVote, Event Registration, and this portfolio.
               </p>
             </div>
           </motion.div>
 
-          {/* Tech pills marquee */}
           <div className="overflow-hidden mb-12 -mx-6 px-6">
             <div className="flex flex-wrap gap-2 mb-12">
-              {techStack.map((t, i) => <TechPill key={t} name={t} index={i} />)}
+              {techStack.map((t, i) => (
+                <TechPill key={t} name={t} index={i} />
+              ))}
             </div>
           </div>
 
-          {/* Skill groups */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {skillGroups.map((group, i) => (
               <GroupCard
@@ -182,7 +184,6 @@ export default function Skills() {
             ))}
           </div>
 
-          {/* All expanded view on larger screens */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -203,6 +204,7 @@ export default function Skills() {
               </div>
             ))}
           </motion.div>
+
         </div>
       </div>
     </PageTransition>

@@ -32,7 +32,7 @@ function TerminalCard() {
   ]
   const fields = [
     { key: 'name', value: `"${personal.name}"` },
-    { key: 'role', value: '"Full Stack Developer"' },
+    { key: 'role', value: '"Full-Stack Web Developer"' },
     { key: 'degree', value: '"BCA"' },
     { key: 'university', value: '"VIT"' },
     { key: 'location', value: '"Vellore, TN"' },
@@ -42,14 +42,13 @@ function TerminalCard() {
 
   return (
     <div className="rounded-3xl overflow-hidden shadow-card-hover border border-white/80 bg-ink text-left">
-      {/* Terminal chrome */}
       <div className="flex items-center gap-2 px-5 py-3.5 bg-white/5 border-b border-white/10">
         <div className="w-3 h-3 rounded-full bg-red-400/80" />
         <div className="w-3 h-3 rounded-full bg-yellow-400/80" />
         <div className="w-3 h-3 rounded-full bg-green-400/80" />
         <span className="ml-3 font-mono text-xs text-white/30">~/about.js</span>
       </div>
-      {/* Code */}
+
       <div className="p-6 font-mono text-sm leading-7">
         <div>
           <span className="text-violet">const</span>
@@ -57,6 +56,7 @@ function TerminalCard() {
           <span className="text-slate"> = </span>
           <span className="text-cream">{'{'}</span>
         </div>
+
         {fields.map((f, i) => (
           <motion.div
             key={f.key}
@@ -71,6 +71,7 @@ function TerminalCard() {
             <span className="text-white/30">,</span>
           </motion.div>
         ))}
+
         <div className="text-cream">{'}'}</div>
       </div>
     </div>
@@ -94,6 +95,7 @@ function InterestCard({ item, index }) {
       >
         {item.icon}
       </div>
+
       <h4 className="font-heading font-bold text-ink mb-1">{item.label}</h4>
       <p className="text-slate text-sm leading-relaxed">{item.description}</p>
     </motion.div>
@@ -111,37 +113,44 @@ export default function About() {
   return (
     <PageTransition>
       <div className="page-full bg-about overflow-y-auto">
-        {/* Background orbs */}
+
         <div className="absolute top-40 right-0 w-72 h-72 bg-mint/20 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute bottom-20 left-0 w-96 h-96 bg-accent/15 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 pt-28 pb-20 relative z-10">
-          {/* Header */}
+
           <RevealDiv>
             <div className="section-number mb-4">01 — About Me</div>
+
             <h2 className="font-heading font-extrabold text-ink leading-tight mb-4" style={{ fontSize: 'clamp(40px, 6vw, 76px)' }}>
               Who I <span className="text-gradient">Am</span>
             </h2>
+
             <p className="text-slate text-lg max-w-xl mb-16">
-              A developer who believes great code and great design go hand in hand.
+              A BCA student at VIT who enjoys learning by building real projects.
             </p>
           </RevealDiv>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-            {/* Left */}
+
             <div className="space-y-8">
+
               <RevealDiv delay={0.1} direction="left">
                 <div className="card p-8 space-y-5">
-                  <p className="text-[#E6E6E6]/80 text-base leading-relaxed">{personal.bio}</p>
-                  <p className="text-[#E6E6E6]/70 text-base leading-relaxed">
-                    I'm passionate about building software that doesn't just work — it delights. 
-                    My approach combines clean architecture with thoughtful UX, always asking 
-                    "how can this be better for the user?"
+
+                  <p className="text-[#E6E6E6]/80 text-base leading-relaxed">
+                    {personal.bio}
                   </p>
+
+                  <p className="text-[#E6E6E6]/70 text-base leading-relaxed">
+                    I enjoy building simple and useful web applications and improving them step by step.
+                    I'm currently focusing on React for the frontend and FastAPI for the backend while
+                    learning better ways to structure and write clean code.
+                  </p>
+
                 </div>
               </RevealDiv>
 
-              {/* Quick Facts */}
               <RevealDiv delay={0.25} direction="left">
                 <div className="grid grid-cols-2 gap-3">
                   {quickFacts.map((fact) => (
@@ -161,7 +170,6 @@ export default function About() {
                 </div>
               </RevealDiv>
 
-              {/* Goal */}
               <RevealDiv delay={0.35} direction="left">
                 <div className="rounded-3xl p-6 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #E8654A15, #D4A84715)' }}>
                   <div className="absolute top-0 right-0 w-20 h-20 bg-accent/10 rounded-full blur-2xl" />
@@ -171,26 +179,29 @@ export default function About() {
                   </p>
                 </div>
               </RevealDiv>
+
             </div>
 
-            {/* Right */}
             <div className="space-y-8">
+
               <RevealDiv delay={0.15} direction="right">
                 <TerminalCard />
               </RevealDiv>
 
-              {/* Interests */}
               <RevealDiv delay={0.3}>
                 <div className="font-mono text-xs text-slate uppercase tracking-widest mb-4 flex items-center gap-2">
                   <Heart size={12} className="text-accent" /> Beyond Code
                 </div>
+
                 <div className="grid grid-cols-3 gap-3">
                   {interests.map((item, i) => (
                     <InterestCard key={item.label} item={item} index={i} />
                   ))}
                 </div>
               </RevealDiv>
+
             </div>
+
           </div>
         </div>
       </div>

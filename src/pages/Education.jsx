@@ -48,7 +48,6 @@ export default function Education() {
         <div className="absolute bottom-20 left-0 w-96 h-96 bg-accent/10 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 pt-28 pb-20 relative z-10">
-          {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,19 +60,17 @@ export default function Education() {
           </motion.div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            {/* Main card */}
+
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.7 }}
               className="lg:col-span-2 card p-8 relative overflow-hidden"
             >
-              {/* Decorative VIT text */}
               <div className="absolute -right-4 -top-4 font-heading font-extrabold text-8xl text-sand/40 pointer-events-none select-none leading-none">
                 VIT
               </div>
 
-              {/* Status badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-900/30 border border-green-700/40 mb-6">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                 <span className="font-mono text-xs text-green-400 font-semibold">{edu.status}</span>
@@ -82,6 +79,7 @@ export default function Education() {
               <h3 className="font-heading font-bold text-ink text-2xl md:text-3xl mb-2 leading-tight">
                 {edu.degree}
               </h3>
+
               <div className="flex flex-wrap gap-4 text-sm text-slate mb-6">
                 <span className="flex items-center gap-1.5">
                   <GraduationCap size={14} className="text-accent" />
@@ -99,7 +97,6 @@ export default function Education() {
 
               <p className="text-[#E6E6E6]/70 leading-relaxed mb-8">{edu.description}</p>
 
-              {/* Courses */}
               <div className="mb-6">
                 <div className="font-mono text-xs text-slate uppercase tracking-widest mb-3">Core Courses</div>
                 <div className="flex flex-wrap gap-2">
@@ -107,7 +104,6 @@ export default function Education() {
                 </div>
               </div>
 
-              {/* Achievements */}
               <div>
                 <div className="font-mono text-xs text-slate uppercase tracking-widest mb-3">Highlights</div>
                 <div className="space-y-2.5">
@@ -116,9 +112,8 @@ export default function Education() {
               </div>
             </motion.div>
 
-            {/* Side cards */}
             <div className="flex flex-col gap-5">
-              {/* Graduation countdown */}
+
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -132,7 +127,6 @@ export default function Education() {
                 <div className="font-mono text-xs text-slate">{edu.grade} · VIT</div>
               </motion.div>
 
-              {/* Goal */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -150,7 +144,6 @@ export default function Education() {
                 </p>
               </motion.div>
 
-              {/* Stats */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -160,10 +153,10 @@ export default function Education() {
                 <div className="font-mono text-xs text-slate uppercase tracking-widest mb-4">At a Glance</div>
                 <div className="space-y-3">
                   {[
-                    { label: 'Degree Type', value: 'Bachelor\'s (BCA)' },
+                    { label: 'Degree Type', value: "Bachelor's (BCA)" },
                     { label: 'Duration', value: '3 Years (2024–27)' },
                     { label: 'Mode', value: 'Full-time, On-campus' },
-                    { label: 'Specialization', value: 'Computer Applications' },
+                    { label: 'Specialization', value: 'AI / ML (Artificial Intelligence & Machine Learning)' },
                   ].map((item) => (
                     <div key={item.label} className="flex justify-between text-sm">
                       <span className="text-slate">{item.label}</span>
@@ -172,6 +165,7 @@ export default function Education() {
                   ))}
                 </div>
               </motion.div>
+
             </div>
           </div>
         </div>

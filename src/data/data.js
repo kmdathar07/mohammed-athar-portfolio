@@ -14,12 +14,12 @@ export const personal = {
   graduationYear: 2027,
   bio: "I'm a BCA student at VIT who believes in learning by building. I write clean, purposeful code — from React frontends to FastAPI backends. When I'm not coding, I'm thinking three moves ahead on the chessboard or humming a melody.",
   tagline: 'Building real-world web applications that matter.',
-  email: 'kmdathar07@gmail.com',         // ← UPDATE
-  phone: '+91 90251 51825',                    // ← UPDATE
-  linkedin: '',  // ← UPDATE
-  github: 'https://github.com/kmdathar07',         // ← UPDATE
-  instagram: 'https://instagram.com/mr.athar07',   // ← UPDATE
-  resumeUrl: '/resume.pdf',                    // place resume.pdf in /public
+  email: 'kmdathar07@gmail.com',
+  phone: '+91 90251 51825',
+  linkedin: '',
+  github: 'https://github.com/kmdathar07',
+  instagram: 'https://instagram.com/mr.athar07',
+  resumeUrl: '/resume.pdf',
   availableForWork: true,
 }
 
@@ -87,7 +87,7 @@ export const projects = [
     number: '01',
     title: 'Re-Po-Generator',
     shortDesc: 'Resume and portfolio generation tool.',
-    description: 'An intelligent platform that auto-generates professional resumes and portfolio websites from user-provided information..',
+    description: 'An intelligent platform that auto-generates professional resumes and portfolio websites from user-provided information.',
     tech: ['React', 'FastAPI', 'Python', 'AI/ML', 'Tailwind'],
     github: 'https://github.com/kmdathar07/re-po-generator',
     demo: 'https://re-po-generator.vercel.app/',
@@ -102,8 +102,8 @@ export const projects = [
     shortDesc: 'Real-time classroom voting & polling application.',
     description: 'A live polling platform enabling students and instructors to conduct instant votes, gather class feedback, and visualize results in real-time with animated charts.',
     tech: ['React', 'JavaScript', 'CSS3', 'Local Storage'],
-    github: 'https://github.com/mohammed-athar-k/classVoting',
-    demo: '',
+    github: 'https://github.com/kmdathar07/classVoting',
+    demo: 'https://classvote-delta.vercel.app/',
     featured: true,
     status: 'Complete',
     accent: '#4ECDC4',
@@ -115,12 +115,25 @@ export const projects = [
     shortDesc: 'Database-driven Java applications with full CRUD.',
     description: 'Production-style Java applications demonstrating full CRUD operations, stored procedures, connection pooling, and relational database management using JDBC.',
     tech: ['Java', 'JDBC', 'SQL', 'MySQL', 'OOP'],
-    github: 'https://github.com/mohammed-athar-k/jdbc-java',
+    github: 'https://github.com/kmdathar07/event-registration-system',
     demo: '',
     featured: false,
     status: 'Complete',
     accent: '#D4A847',
   },
+  {
+  id: 4,
+  number: '04',
+  title: 'Portfolio',
+  shortDesc: 'Personal developer portfolio website.',
+  description: 'A modern animated developer portfolio showcasing projects, skills, education, and contact functionality. Built with React, Vite, Tailwind CSS, and Framer Motion with a FastAPI backend for the contact form.',
+  tech: ['React', 'Vite', 'Tailwind', 'Framer Motion', 'FastAPI'],
+  github: 'https://github.com/kmdathar07/mohammed-athar-portfolio',
+  demo: 'https://mohammed-athar-portfolio.vercel.app/',
+  featured: false,
+  status: 'Live',
+  accent: '#7C6AC4',
+}
 ]
 
 export const education = [
@@ -133,12 +146,12 @@ export const education = [
     period: '2024 — 2027',
     status: 'Currently Enrolled',
     grade: 'Second Year',
-    description: 'Comprehensive program covering software development fundamentals, data structures, web technologies, database management, and software engineering practices.',
+    description: 'Comprehensive program covering software development fundamentals, data structures, web development, database management, and software engineering practices.',
     courses: [
       'Data Structures & Algorithms',
       'Object-Oriented Programming',
-      'Web Technologies',
-      'Database Management',
+      'Web Development',
+      'Database Management Systems',
       'Software Engineering',
       'Computer Networks',
     ],
